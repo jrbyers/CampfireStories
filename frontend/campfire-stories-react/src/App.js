@@ -51,7 +51,7 @@ const TextBub = styled.div`
 
 function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     setStory("")
-    const apiKey = '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';
+    const apiKey = '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';
     const promptfull = 'write a spooky story with' + prompt + 'with campfire safety';
     
     const headers = {
