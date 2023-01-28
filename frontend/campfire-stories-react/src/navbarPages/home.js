@@ -1,30 +1,3 @@
-/*
-import React, {useState} from 'react';
-import logo from '../logo.svg';
-import TextField from "@mui/material/TextField";
-import Button from "@mui/material/Button";
-
-
-// box component for text location
-// https://www.fullstacklabs.co/blog/create-box-component-react-native-styled-system
-
-function Home() {
-
-    return (
-        <div className="App">
-            <h1>dis the home</h1>
-            <TextField id="outlined-basic" label="Theme" variant="outlined" />
-            <Button variant="outlined">Click MEEEEE</Button>
-        </div>
-    );
-}
-
-export default Home;
-*/
-
-
-
-
 import axios from 'axios';
 import '../App.css';
 import React, { useState } from 'react';
@@ -78,11 +51,12 @@ const TextBub = styled.div`
 
 function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     setStory("")
-    const apiKey = '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';
+    const apiKeyNate = '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';
+    const apiKeyJR = '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'
     const promptfull = 'write a spooky story with' + prompt + 'with campfire safety';
 
     const headers = {
-        'Authorization': `Bearer ${apiKey}`
+        'Authorization': `Bearer ${apiKeyNate}`
     };
 
     setLoadBool(!loadbool)
@@ -98,6 +72,7 @@ function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     })
     .catch(function (error) {
         setStory(error);
+        console.log(error)
     });
 
 }
