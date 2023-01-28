@@ -5,6 +5,7 @@ import mygif from '../campfire.gif'
 import background2 from '../eveningbackground.png'
 import styled from 'styled-components';
 import scroll from '../pixelscroll3.png'
+import { usePromiseTracker } from "react-promise-tracker";
 
 const Background = styled.div`
   width: 100vw;  /* think these two say the size of the background relative to the page 100 = 100 percent of the background to 100 percent of the page */
@@ -48,6 +49,14 @@ const TextBub = styled.div`
   box-sizing: border-box;
   overflow-y: auto;
 `;
+
+const LoadingIndicator = props => {
+    const { promiseInProgress } = usePromiseTracker();
+
+    return (
+     <h1>Hey some async call in progress ! </h1>
+    );
+}
 
 function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     setStory("")

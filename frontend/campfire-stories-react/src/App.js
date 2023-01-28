@@ -5,6 +5,7 @@ import Navbar from './components/navbar';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import About from './navbarPages/about';
 import Home from './navbarPages/home';
+import CampfireSafety from './navbarPages/campfireSafety';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Routes>
             <Route path='/' element={<Home />} exact />
             <Route path='/home' element={<Home />} exact />
+            <Route path='/campfireSafety' element={<CampfireSafety />} exact />
             <Route path='/about' element={<About />} exact />
 
         </Routes>
