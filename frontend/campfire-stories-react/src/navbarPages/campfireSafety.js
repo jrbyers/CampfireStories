@@ -1,6 +1,4 @@
 import React, {useState} from 'react';
-import logo from '../logo.svg';
-
 
 function About() {
 
@@ -8,20 +6,10 @@ function About() {
         <div className="App">
             <header className="App-header">
 
-
                 <p>
-                    This is the campfire saftey page
+                    This is the campfire safety page. Be safe!
                 </p>
 
-
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Campfire Safety
-                </a>
             </header>
         </div>
     );
