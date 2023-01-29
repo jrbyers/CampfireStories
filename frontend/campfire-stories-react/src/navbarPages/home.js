@@ -30,7 +30,7 @@ const Container = styled.div`
 const Image = styled.img`
   width: 300px; 
   height: 300px;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
@@ -49,13 +49,10 @@ const H1 = styled.h1`
 const TextBub = styled.div`
   background-image: url(${scroll});
   background-size: 100%;
-  font-family: 'Papyrus', Fantasy;
-  color: black;
   width: 800px;
   height: 500px;
-  padding: 65px 170px 65px 170px;
+  padding: 75px 170px 70px 170px;
   box-sizing: border-box;
-  overflow-y: auto;
 `;
 
 const LoadingIndicator = props => {
@@ -72,12 +69,24 @@ const LoadingIndicator = props => {
 
     );
 }
+const InsideText = styled.div`
+  width: 465px;
+  height: 355px;
+  overflow-y: scroll;
+  font-family: 'Papyrus', Fantasy;
+  color: black;
+`
 
 function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     setStory("")
     const apiKeyNate = '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';
     const apiKeyJR = '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'
-    const promptfull = 'write a spooky story with' + prompt + 'with campfire safety';
+
+    const tips = ["camping tips", "campfire safety", "bear safety", "smokey the bear", "tips on setting up a tent", "tips on how to pick a campsite", "campfire safety"]
+    const randomIndex = Math.floor(Math.random() * tips.length);
+    const randomElement = tips[randomIndex];
+    console.log(randomElement)
+    const promptfull = 'write a spooky story with ' + prompt + ' with ' + randomElement;
 
     const headers = {
         'Authorization': `Bearer ${apiKeyJR}`
@@ -123,10 +132,12 @@ function Home() {
           <Container>
           <TextBub>
               <LoadingIndicator/>
+          <InsideText>
             {story}
+            </InsideText>
           </TextBub>
           </Container>
-          <Image src={mygif} alt="My GIF"/>
+      <Image src={mygif} alt="campfire"/>
       </Background>
     );
 }
