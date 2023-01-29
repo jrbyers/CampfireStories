@@ -25,15 +25,18 @@ const Background = styled.div`
   background-image: url(${backgroundWhite});
 `;
 
+const P = styled.p`
+    padding-left: 20px;
+    padding-right: 20px;
+`;
+
+const H2 = styled.h2`
+    padding-left: 20px;
+    padding-right: 20px;
+`;
+
 
 function About() {
-    const [count, setCount] = useState("")
-
-    function yoMamaButton() {
-
-        // nathan api
-        setCount("yo")
-    }
 
     return (
         <Background>
@@ -41,12 +44,12 @@ function About() {
             <h1>
                 Design Team
             </h1>
-            <p>
-                All members of Brown Men's Swim and Dive Team, the design team decided to take their gifts
+            <P>
+                    All members of Brown Men's Swim and Dive Team, the design team decided to take their gifts
                 out of the pool for this hackathon. Bringing in their different skill sets, these bears, just like
-                smokey the bear, want to ensure that people have fun around campfires while also being
+                Smokey the Bear, want to ensure that people have fun around campfires while also being
                 conscious and aware of potential dangers and how to prevent them.
-            </p>
+            </P>
 
             <h3>
                 John Ryan Byers
@@ -59,15 +62,14 @@ function About() {
             </p>
             <Background>
             <h3>
-                Nathan Depiero
+                Nathan DePiero
             </h3>
             <img src={Nathan} alt={"Nathan Depiero"}/>
             <img src={NateSwimming} alt={"Nathan Swimming"}/>
 
 
-
             <p>
-                Hailing from Greenbull, South Carolina, our second bear is Nathan Depiero. Another junior here
+                Hailing from Greenville, South Carolina, our second bear is Nathan DePiero. Another junior here
                 at Brown and CS-Econ Concentrator.
             </p>
             <h3>
@@ -76,7 +78,7 @@ function About() {
             <img src={Marcus} alt={"Marcus Lee"}/>
             <img src={MarcusSwimming} alt={"Marcus Swimming"}/>
             <p>
-                Hailing from Taiwan, our third bear is Marcus Lee. A sophomore here at Brown and a CS-APMA
+                Hailing from Taipei, Taiwan, our third bear is Marcus Lee. A sophomore here at Brown and a CS-APMA
                 concentrator.
             </p>
                 <Background>
@@ -91,10 +93,10 @@ function About() {
                 here at Brown and an aspiring CS-Econ concentrator.
             </p>
 
-            <h2>
+            <H2>
                 These bears will be competing at the Ivy League Championship here at Brown from Wednesday
                 February 22nd to Saturday February 25th. Please come out and support your bears!
-            </h2>
+            </H2>
                 </Background>
             </Background>
 

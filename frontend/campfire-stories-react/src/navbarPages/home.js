@@ -38,8 +38,8 @@ const Image = styled.img`
 `;
 
 const LoadingIcon = styled.img`
-    width: 300px; 
-    height: 300px;
+    width: 270px; 
+    height: 270px;
 `;
 
 const H1 = styled.h1`
@@ -49,9 +49,9 @@ const H1 = styled.h1`
 const TextBub = styled.div`
   background-image: url(${scroll});
   background-size: 100%;
-  width: 800px;
-  height: 500px;
-  padding: 75px 170px 70px 170px;
+  width: 1000px;
+  height: 560px;
+  padding: 80px 20px 90px 215px;
   box-sizing: border-box;
 `;
 
@@ -62,7 +62,7 @@ const LoadingIndicator = props => {
         promiseInProgress &&
         <div>
             <LoadingIcon src={bearGif} alt="My GIF"/>
-            <h1>    Loading your story . . . </h1>
+            <H1>    Loading your story . . . </H1>
 
         </div>
 
@@ -70,8 +70,9 @@ const LoadingIndicator = props => {
     );
 }
 const InsideText = styled.div`
-  width: 465px;
-  height: 355px;
+  width: 570px;
+  height: 415px;
+  font-size: 24px;
   overflow-y: scroll;
   font-family: 'Papyrus', Fantasy;
   color: black;
@@ -89,7 +90,7 @@ function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     const promptfull = 'write a spooky story with ' + prompt + ' with ' + randomElement;
 
     const headers = {
-        'Authorization': `Bearer ${apiKeyJR}`
+        'Authorization': `Bearer ${apiKeyNate}`
     };
 
     setLoadBool(!loadbool)
@@ -131,7 +132,7 @@ function Home() {
           </Container>
           <Container>
           <TextBub>
-              <LoadingIndicator/>
+          <LoadingIndicator/>
           <InsideText>
             {story}
             </InsideText>
