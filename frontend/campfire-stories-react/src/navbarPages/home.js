@@ -91,7 +91,7 @@ function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     const promptfull = 'write a spooky story with ' + prompt + ' with ' + randomElement;
 
     const headers = {
-        'Authorization': `Bearer ${apiKeyNate}`
+        'Authorization': `Bearer ${apiKeyMarcus}`
     }
 
     setLoadBool(!loadbool)

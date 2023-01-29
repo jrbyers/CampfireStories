@@ -3,15 +3,13 @@ import nightsky from '../nightsky3.gif'
 import styled from 'styled-components';
 
 const Background = styled.div`
-    width: 100vw;
-    height: 220vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    align-items: center;
-    background-image: url(${nightsky});
+    height: 3000px;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(${nightsky});
 `;
 
 const Container = styled.div`
@@ -98,7 +96,23 @@ function CampfireSafety() {
                     <li>Do NOT climb a tree. Both grizzlies and black bears can climb trees.</li>
                     <li>Leave the area or take a detour. If this is impossible, wait until the bear moves away. Always leave the bear an escape route.</li>
                     <li>Be especially cautious if you see a female with cubs; never place yourself between a mother and her cub, and never attempt to approach them. The chances of an attack escalate greatly if she perceives you as a danger to her cubs.</li>
-
+                </ul>
+            </Wrapper>
+            <H2>Essential Camping Gear!</H2>
+            <Wrapper>
+                <ul>
+                    <li>Tent</li>
+                    <li>Sleeping bag or cot</li>
+                    <li>Mosquito net</li>
+                    <li>Mini-broom and dustpan</li>
+                    <li>Pillows!</li>
+                    <li>Camp stove & fuel</li>
+                    <li>Camping chairs</li>
+                    <li>Flashlights and batteries!</li>
+                    <li>Pots and pans</li>
+                    <li>Cooler and ice packs</li>
+                    <li>First aid kit!</li>
+                    <li>Water filter!</li>
                 </ul>
             </Wrapper>
         </Background>
