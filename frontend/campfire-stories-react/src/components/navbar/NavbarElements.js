@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // color table: https://www.unm.edu/~tbeach/IT145/color.html
 
 export const Nav = styled.nav`
-background: #FF6600;  // orange
+background: #dda0dd;
 height: 85px;
 display: flex;
 justify-content: space-between;
@@ -16,7 +16,7 @@ z-index: 12;
 `;
 
 export const NavLink = styled(Link)`
-color: #663300;
+color: black;
 display: flex;
 align-items: center;
 text-decoration: none;
