@@ -3,15 +3,13 @@ import nightsky from '../nightsky3.gif'
 import styled from 'styled-components';
 
 const Background = styled.div`
-    width: 100vw;
-    height: 220vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    display: block;
-    align-items: center;
-    background-image: url(${nightsky});
+    height: 3000px;
     background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(${nightsky});
 `;
 
 const Container = styled.div`
