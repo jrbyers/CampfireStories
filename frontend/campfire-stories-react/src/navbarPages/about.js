@@ -15,7 +15,7 @@ import backgroundWhite from "../backgroundwhite.png";
 
 const Background = styled.div`
   width: 100vw;  
-  height: 100vh;
+  height: 60vh;
   background-size: cover;
   background-position: center;
   background-repeat: repeat;
