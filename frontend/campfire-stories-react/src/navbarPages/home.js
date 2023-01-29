@@ -80,8 +80,7 @@ const InsideText = styled.div`
 
 function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     setStory("")
-    const apiKeyNate = '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';
-    
+    const apiKeyNate = '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'; /*use your own OpenAI API Key*/
 
     const tips = ["camping tips", "campfire safety", "bear safety", "smokey the bear", "tips on setting up a tent", "tips on how to pick a campsite", "campfire safety"]
     const randomIndex = Math.floor(Math.random() * tips.length);
