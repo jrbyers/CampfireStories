@@ -5,7 +5,10 @@ import mygif from '../campfire.gif'
 import background2 from '../eveningbackground.png'
 import styled from 'styled-components';
 import scroll from '../pixelscroll3.png'
+import bearGif from '../Bear_Europe_idle.webp'
+
 import { usePromiseTracker } from "react-promise-tracker";
+import { trackPromise } from 'react-promise-tracker';
 
 const Background = styled.div`
   width: 100vw;  /* think these two say the size of the background relative to the page 100 = 100 percent of the background to 100 percent of the page */
@@ -34,6 +37,11 @@ const Image = styled.img`
   margin:auto;
 `;
 
+const LoadingIcon = styled.img`
+    width: 300px; 
+    height: 300px;
+`;
+
 const H1 = styled.h1`
   font-family: 'Lucida Handwriting', Cursive;
 `;
@@ -54,7 +62,14 @@ const LoadingIndicator = props => {
     const { promiseInProgress } = usePromiseTracker();
 
     return (
-     <h1>Hey some async call in progress ! </h1>
+        promiseInProgress &&
+        <div>
+            <LoadingIcon src={bearGif} alt="My GIF"/>
+            <h1>    Loading your story . . . </h1>
+
+        </div>
+
+
     );
 }
 
@@ -69,6 +84,7 @@ function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     };
 
     setLoadBool(!loadbool)
+    trackPromise(
     axios.post('https://api.openai.com/v1/engines/text-davinci-003/completions', {
         prompt: promptfull,
         max_tokens: 3800
@@ -82,7 +98,7 @@ function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     .catch(function (error) {
         setStory(error);
         console.log(error)
-    });
+    }));
 
 }
 
@@ -106,6 +122,7 @@ function Home() {
           </Container>
           <Container>
           <TextBub>
+              <LoadingIndicator/>
             {story}
           </TextBub>
           </Container>
