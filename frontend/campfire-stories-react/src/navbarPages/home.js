@@ -61,11 +61,12 @@ const LoadingIndicator = props => {
 function GenerateStory(prompt, setStory,loadbool,setLoadBool) {
     setStory("")
     const apiKeyNate = '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';
-    const apiKeyJR = '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'
+    const apiKeyJR = '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';
+    const apiKeyMarcus = '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';
     const promptfull = 'write a spooky story with' + prompt + 'with campfire safety';
 
     const headers = {
-        'Authorization': `Bearer ${apiKeyJR}`
+        'Authorization': `Bearer ${apiKeyMarcus}`
     };
 
     setLoadBool(!loadbool)
